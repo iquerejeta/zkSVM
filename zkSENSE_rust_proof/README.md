@@ -5,8 +5,8 @@ the proof of correctness.
 
 To run benchmarks, run 
 
-`cargo bench` 
+`cargo +nightly bench` 
 
 To run the example, run 
 
-`cargo run --example main --release`
+`cargo +nightly run --example main --release`
