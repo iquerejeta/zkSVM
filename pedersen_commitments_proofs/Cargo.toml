@@ -1,0 +1,33 @@
+[package]
+name = "pedersen_commitments_proofs"
+version = "0.1.0"
+authors = ["iquerejeta <querejeta.inigo@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+curve25519-dalek = { version = "2", default-features = false }
+ip_zk_proof = { path = "../inner_product_proof" }
+sha3 = { version = "0.8", default-features = false }
+rand_core = { version = "0.5.1", default-features = false }
+merlin = "2.0.0"
+rand = "0.7.3"
+rand_chacha = "0.2"
+num-bigint = "0.3"
+zkp = "0.7.0"
+
+[dev-dependencies]
+criterion = "0.3.1"
+
+[[bench]]
+name = "square_proof"
+harness = false
+
+[[bench]]
+name = "equality_proof"
+harness = false
+
+[[bench]]
+name = "opening_proof"
+harness = false
